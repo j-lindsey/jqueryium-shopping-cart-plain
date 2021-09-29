@@ -29,47 +29,48 @@
               <th>Price per Unit</th>
               <th>Qty</th>
               <th></th>
-              <th>Total Price</th>
+              <th>Total Item Price</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td class="item">Salmon</td>
               <td class="pricePerUnit">$60.00</td>
-              <td class="qty">1</td>
+              <td class="qty"><input value="1" /></td>
               <td class="cancel"><button>Cancel</button></td>
-              <td class="totalPrice"></td>
+              <td class="totalItemPrice"></td>
             </tr>
             <tr>
               <td class="item">Apples</td>
               <td class="pricePerUnit">$2.50</td>
-              <td class="qty">4</td>
+              <td class="qty"><input value="4" /></td>
               <td class="cancel"><button>Cancel</button></td>
-              <td class="totalPrice"></td>
+              <td class="totalItemPrice"></td>
             </tr>
             <tr>
               <td class="item">Tomatoes</td>
               <td class="pricePerUnit">$1.50</td>
-              <td class="qty">2</td>
+              <td class="qty"><input value="2" /></td>
               <td class="cancel"><button>Cancel</button></td>
-              <td class="totalPrice"></td>
+              <td class="totalItemPrice"></td>
             </tr>
-            <tr>
-              <td class="item"><input type="text" placeholder="Item Name" /></td>
-              <td class="pricePerUnit">$<input type="number" placeholder="Price Per Unit" /></td>
-              <td class="qty"><input type="number" placeholder="Qty"></td>
-              <td class="addToCart"><button>Add to Cart</button></td>
-            </tr>
+
           </tbody>
         </table>
-
+        <form class="col-12" id="addItem">
+            <input type="text" name="item" placeholder="Item Name" /></td>
+            <input type="number" step=".01" name="pricePerUnit" placeholder="Price Per Unit" /></td>
+            <input type="number" name="qty" placeholder="Qty"></td>
+            <button class="btn">Add to Cart</button></td>
+        </form>
       </div>
     </div>
     <div>
-      <button class="calculatePrice">Calculate Price</button>
+      <button class="btn calculatePrice">Calculate Price</button>
     </div>
     <div>
       <h2>Total Price</h2>
+      <h3 id="totalPrice"></h3>
     </div>
   </div>
 </body>
