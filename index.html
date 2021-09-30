@@ -19,7 +19,11 @@
 
 <body>
   <div class="container">
-    <h1>Shopping Cart</h1>
+    <div class="row">
+      <div class="col-12 text-center">
+        <h1>Shopping Cart</h1>
+      </div>
+    </div>
     <div class="row">
       <div class="col-12">
         <table class="table table-responsive">
@@ -37,38 +41,38 @@
               <td class="item">Salmon</td>
               <td class="pricePerUnit">$60.00</td>
               <td class="qty"><input value="1" /></td>
-              <td class="cancel"><button>Cancel</button></td>
+              <td class="cancel"><button class="btn btn-danger">Cancel</button></td>
               <td class="totalItemPrice"></td>
             </tr>
             <tr>
               <td class="item">Apples</td>
               <td class="pricePerUnit">$2.50</td>
               <td class="qty"><input value="4" /></td>
-              <td class="cancel"><button>Cancel</button></td>
+              <td class="cancel"><button class="btn btn-danger">Cancel</button></td>
               <td class="totalItemPrice"></td>
             </tr>
             <tr>
               <td class="item">Tomatoes</td>
               <td class="pricePerUnit">$1.50</td>
               <td class="qty"><input value="2" /></td>
-              <td class="cancel"><button>Cancel</button></td>
+              <td class="cancel"><button class="btn btn-danger">Cancel</button></td>
               <td class="totalItemPrice"></td>
             </tr>
 
           </tbody>
         </table>
-        <form class="col-12" id="addItem">
-            <input type="text" name="item" placeholder="Item Name" /></td>
-            <input type="number" step=".01" name="pricePerUnit" placeholder="Price Per Unit" /></td>
-            <input type="number" name="qty" placeholder="Qty"></td>
-            <button class="btn">Add to Cart</button></td>
-        </form>
       </div>
+      <form class="col-12" id="addItem">
+        <input type="text" name="item" placeholder="Item Name" /></td>
+        <input type="number" step=".01" name="pricePerUnit" placeholder="Price Per Unit" /></td>
+        <input type="number" name="qty" placeholder="Qty"></td>
+        <button class="btn btn-success">Add to Cart</button></td>
+      </form>
     </div>
-    <div>
-      <button class="btn calculatePrice">Calculate Price</button>
+    <div class="text-right">
+      <button class="btn btn-primary calculatePrice">Calculate Price</button>
     </div>
-    <div>
+    <div class="text-right">
       <h2>Total Price</h2>
       <h3 id="totalPrice"></h3>
     </div>
