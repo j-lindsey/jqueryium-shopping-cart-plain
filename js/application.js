@@ -6,6 +6,7 @@ let updateTotalPrice = function () {
         let totalPrice = pricePerUnit * qty;
         $(ele).children('.totalItemPrice').html('$' + totalPrice.toFixed(2));
     });
+    $('#totalPrice').html("");
 }
 
 
@@ -15,6 +16,10 @@ $(document).ready(function () {
     $(document).on('input', '.qty input', function () {
         updateTotalPrice();
     });
+
+    $(document).on('click', '.cancel button', function(){
+        $(this).closest('tr').remove();
+    })
 
     $('#addItem').on('submit', function (event) {
         event.preventDefault();
