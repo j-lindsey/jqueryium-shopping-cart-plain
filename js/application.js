@@ -3,6 +3,9 @@ let updateTotalPrice = function () {
     $('tbody tr').each(function (i, ele) {
         let pricePerUnit = parseFloat(($(ele).children('.pricePerUnit').text()).substring(1));
         let qty = parseFloat($(ele).find('.qty input').val());
+        if(qty === NaN){
+            qty = 0;
+        }
         let totalPrice = pricePerUnit * qty;
         $(ele).children('.totalItemPrice').html('$' + totalPrice.toFixed(2));
     });
